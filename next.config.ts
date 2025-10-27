@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
+/** next.config.js */
+const repo = "https://github.com/widii11/Pomofocus_Clone_055.git"; // ganti dengan nama repo GitHub lo
 
-const nextConfig: NextConfig = {
-  /* config options here */
+module.exports = {
+  output: "export", // gunakan next export
+  trailingSlash: true, // membantu routing di GitHub Pages
+  // jika mau host di subpath (username.github.io/REPO_NAME), set basePath & assetPrefix:
+  basePath: `/${repo}`,
+  assetPrefix: `/${repo}/`,
 };
-
-export default nextConfig;
